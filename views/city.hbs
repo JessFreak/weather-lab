@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather</title>
+    <style>
+        main {
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            a {
+                padding: 20px;
+                border: 2px solid #ccc;
+                border-radius: 10px;
+                text-decoration: none;
+                color: white;
+                text-align: center;
+                width: 200px;
+                font-size: 1.5rem;
+                background-color: darkgreen;
+            }
+
+            a:hover {
+                background-color: rgba(0, 100, 0, 0.8);
+            }
+        }
+    </style>
+</head>
+<body>
+<main>
+    <h1>Погода для {{ city }}</h1>
+    <a href="/weather">Назад</a>
+</main>
+</body>
+</html>
