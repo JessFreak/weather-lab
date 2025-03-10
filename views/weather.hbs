@@ -17,6 +17,22 @@
     <a href="weather/kharkiv">Харків</a>
     <a href="weather/dnipro">Дніпро</a>
     <a href="weather/kyslytsia">Кислиця</a>
+    <a id="getWeatherBtn">За вашим розташуванням</a>
 </main>
+
+<script>
+    document.getElementById('getWeatherBtn').addEventListener('click', function() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition((position) => {
+                const lat = position.coords.latitude;
+                const lon = position.coords.longitude;
+
+                window.location.href = `/weather/current?lat=${lat}&lon=${lon}`;
+            });
+        } else {
+            alert("Ваш браузер не підтримує геолокацію.");
+        }
+    });
+</script>
 </body>
 </html>
