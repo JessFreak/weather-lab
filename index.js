@@ -12,10 +12,7 @@ app.get('/weather', (req, res) => {
 
 app.get('/weather/current', async (req, res) => {
   const { lat, lon } = req.query;
-  console.log(lat, lon);
   const weather = await getWeatherByParams({ lat, lon });
-  console.log(weather);
-  console.log('aboba');
 
   res.render('city', { weather });
 });

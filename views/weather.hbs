@@ -21,7 +21,7 @@
 </main>
 
 <script>
-    document.getElementById('getWeatherBtn').addEventListener('click', function() {
+    document.getElementById('getWeatherBtn').addEventListener('click', () => {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition((position) => {
                 const lat = position.coords.latitude;
